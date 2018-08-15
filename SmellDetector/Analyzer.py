@@ -1,3 +1,5 @@
+import sys
+
 import SmellDetector.Constants as CONSTS
 from SmellDetector import SmellDectector, SizeMetrics, FileOperations, Utilities
 
@@ -5,13 +7,16 @@ from SmellDetector import SmellDectector, SizeMetrics, FileOperations, Utilities
 def analyze(folder, repoName):
     outputFile = open(folder + "/" + CONSTS.PUPPETEER_OUT_FILE, 'w')
 
-    puppetFileCount = FileOperations.countPuppetFiles(folder)
-    outputFile.write(CONSTS.PUPPET_FILE_COUNT + str(puppetFileCount) + "\n")
-    Utilities.myPrint(CONSTS.PUPPET_FILE_COUNT + str(puppetFileCount))
+    option = sys.argv[2]
 
-    SizeMetrics.collectSizeMetrics(folder, outputFile)
+    if option == '1':
+        puppetFileCount = FileOperations.countPuppetFiles(folder)
+        print("1,PuppetFileCount," + str(puppetFileCount) + "\n")
 
-    SmellDectector.detectSmells(folder, outputFile)
+        SizeMetrics.collectSizeMetrics(folder, outputFile)
+
+    if option == '2':
+        SmellDectector.detectSmells(folder, outputFile)
 
     outputFile.close()
     return

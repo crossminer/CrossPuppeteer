@@ -84,6 +84,7 @@ def identifyMissingElse(folder, outputFile):
 
 def reportSmell(outputFile, fileName, smellName, reason):
     outputFile.write(smellName + " at " + reason + " in file " + fileName + "\n")
+    print("2, " + smellName + ", " + reason + ", " + fileName + "\n")
 
 def getNoOfOperators(str):
     count = 0

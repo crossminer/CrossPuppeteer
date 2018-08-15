@@ -26,24 +26,17 @@ def collectSizeMetrics(folder, outputFile):
                 totalExecs += fileObj.getNoOfExecDeclarations()
                 totalLOC += fileObj.getLinesOfCode()
 
-    outputFile.write(CONSTS.TOTAL_CLASS_DECLS + str(totalClasses) + "\n")
-    Utilities.myPrint(CONSTS.TOTAL_CLASS_DECLS + str(totalClasses))
+    print("1,TotalClasses," + str(totalClasses) + "\n")
 
-    outputFile.write(CONSTS.TOTAL_DEFINE_DECLS + str(totalDefines) + "\n")
-    Utilities.myPrint(CONSTS.TOTAL_DEFINE_DECLS + str(totalDefines))
+    print("1,TotalDefines," + str(totalDefines) + "\n")
 
-    outputFile.write(CONSTS.TOTAL_FILE_RES_DECLS + str(totalFiles) + "\n")
-    Utilities.myPrint(CONSTS.TOTAL_FILE_RES_DECLS + str(totalFiles))
+    print("1,TotalFiles," + str(totalFiles) + "\n")
 
-    outputFile.write(CONSTS.TOTAL_PACKAGE_RES_DECLS + str(totalPackages) + "\n")
-    Utilities.myPrint(CONSTS.TOTAL_PACKAGE_RES_DECLS + str(totalPackages))
+    print("1,TotalPackages," + str(totalPackages) + "\n")
 
-    outputFile.write(CONSTS.TOTAL_SERVICE_RES_DECLS + str(totalServices) + "\n")
-    Utilities.myPrint(CONSTS.TOTAL_SERVICE_RES_DECLS + str(totalServices))
+    print("1,TotalServices," + str(totalServices) + "\n")
 
-    outputFile.write(CONSTS.TOTAL_EXEC_DECLS + str(totalExecs) + "\n")
-    Utilities.myPrint(CONSTS.TOTAL_EXEC_DECLS + str(totalExecs))
+    print("1,TotalExecs," + str(totalExecs) + "\n")
 
-    outputFile.write(CONSTS.TOTAL_LOC + str(totalLOC) + "\n")
-    Utilities.myPrint(CONSTS.TOTAL_LOC + str(totalLOC))
+    print("1,TotalLOC," + str(totalLOC) + "\n")
 

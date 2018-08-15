@@ -11,8 +11,8 @@ from SmellDetector import FileOperations, Utilities
 
 def detectSmells(folder, outputFile):
     detectInsufficientMod(folder, outputFile)
-    detectUnstructuredMod(folder, outputFile)
-    detectTightlyCoupledMod(folder, outputFile)
+    #detectUnstructuredMod(folder, outputFile)
+    #detectTightlyCoupledMod(folder, outputFile)
     detectHairballStrAndWeakendMod(folder, outputFile)
 
 

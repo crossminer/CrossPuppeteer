@@ -8,6 +8,7 @@ def myPrint(msg):
 def reportSmell(outputFile, fileName, smellName, reason):
     outputFile.write(smellName + " at " + reason + " in file " + fileName + "\n")
     myPrint(smellName + " at " + reason + " in file " + fileName + "\n")
+    print("2, " + smellName + ", " + reason + ", " + fileName + "\n")
 
 def intersection(list1, list2):
     return list(set(list1) & set(list2))
