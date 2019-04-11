@@ -1513,3 +1513,5 @@ stdlib
 apt::backports
 postgresql::globals
 apt
+proxysql
+mysql::client
